@@ -45,6 +45,8 @@ imgRes = Image.fromarray(LUT[npImage]
 ```
 
 OK, 最后跑一下，效果还可以。
+![效果图1](https://github.com/tignioj/ChangePDFContrast/blob/main/result/res1.png?raw=true)
+![效果图2](https://github.com/tignioj/ChangePDFContrast/blob/main/result/res2.png?raw=true)
 
 
 # 另一种奇特思路：利用PS的动作+批处理。
