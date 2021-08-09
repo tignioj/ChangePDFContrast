@@ -42,7 +42,9 @@ LUT[min:max+1]=np.linspace(start=0,stop=255,num=(max-min)+1,endpoint=True,dtype=
 imgRes = Image.fromarray(LUT[npImage]
 ```
 
-OK, 最后跑一下，效果还可以，就是速度有点慢。
+OK, 最后跑一下，效果还可以。
+![效果图1](https://github.com/tignioj/ChangePDFContrast/blob/main/result/res1.png?raw=true)
+![效果图2](https://github.com/tignioj/ChangePDFContrast/blob/main/result/res2.png?raw=true)
 
 # 性能(参考)
 参数：质量50
