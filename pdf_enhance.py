@@ -11,6 +11,7 @@ def pdfenhance(originImg):
     LUT[min:max+1]=np.linspace(start=0,stop=255,num=(max-min)+1,endpoint=True,dtype=np.uint8)
     # Apply LUT and save resulting image
     imgRes = Image.fromarray(LUT[originImg])
-    npimg = np.array(imgRes)
+    # npimg = np.array(imgRes)
+    return imgRes
 
-    return npimg
+
