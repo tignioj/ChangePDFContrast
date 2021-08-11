@@ -9,10 +9,14 @@ import tempfile
 
 # ==== param list ===
 
-# pdf_file_path = 'origin.pdf'
+pdf_file_path = 'origin.pdf'
 
 # PDF quality,(0~100, A larger number consumes more memory)
 pdf_output_quality = 50
+
+# PDF contrast, (0~100, which decide color range, large number means more contrast)
+contrast_level = 80
+
 # ==== END ===
 
 START_TIME = time.time()
@@ -42,23 +46,17 @@ if not os.path.isfile(pdf_file_path):
     raise "你pdf路径搞错了，检查一下是不是真的有这个东西'" + pdf_file_path +  "'"
 
 
-import tempfile
-
 with tempfile.TemporaryDirectory() as path:
     images = convert_from_path(pdf_file_path, output_folder=path)
-    # Do something here
-    # images = convert_from_path(pdf_file_path)
 
     print("分解完成,用时" + calTime())
-
-
     print("======第二步：图片处理=====")
     i = 0
     imagesPath = []
     try:
         for img in images:
             print("正在处理第" + str(i + 1) + "张图片...")
-            resImg = pdfenhance(img)
+            resImg = pdfenhance(img, contrast_level)
             i = i + 1
             if not os.path.isdir("temp"):
                 os.mkdir("temp")
