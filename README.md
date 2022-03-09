@@ -5,7 +5,13 @@
 
 - 实现思路是拆解所有的PDF为图片，然后利用Python进行批量图像处理。
 
-
+# 运行
+安装依赖库
+```bash
+pip install -r requirement.txt
+```
+安装poppler, 把bin文件添加到系统PATH目录，重启后才能用
+https://blog.alivate.com.au/poppler-windows/
 
 # 实现过程(搬砖过程)
 
