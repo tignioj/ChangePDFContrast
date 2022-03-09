@@ -8,7 +8,7 @@
 # 运行
 安装依赖库
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 安装poppler, 把bin文件添加到系统PATH目录，重启后才能用
 https://blog.alivate.com.au/poppler-windows/
